@@ -1,7 +1,18 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import localFont from "next/font/local";
+import { MenuProvider } from "@/hooks/use-menu";
+import "./globals.css";
+
+const futura = localFont({
+  src: [
+    {
+      path: "../assets/fonts/futura/Futura Book font.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Killer Beach Official Website",
@@ -14,11 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={futura.className}>
       <body className="bg-neutral-950 text-neutral-200">
-        <Header />
-        {children}
-        <Footer />
+        <MenuProvider>
+          <Header />
+          {children}
+        </MenuProvider>
       </body>
     </html>
   );
