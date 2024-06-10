@@ -2,7 +2,7 @@ import { News } from "@/components/news";
 
 export default function Home() {
   return (
-    <main>
+    <main className="mx-auto max-w-7xl">
       <section>
         <h2>Live</h2>
       </section>
