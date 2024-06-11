@@ -11,22 +11,13 @@ export function Home() {
 
   return (
     <main className="h-screen">
-      {/* <video
-        id="video"
-        poster="/artist-photo.jpg"
-        playsInline
-        muted
-        autoPlay
-        loop
-      >
-        <source src="/mv.mp4" type="video/mp4" />
-      </video> */}
       <div className="relative">
         <Image
           src="/artist-photo.jpg"
           alt="artist photo"
           width={6000}
           height={4000}
+          className="max-h-[80vh] object-cover"
         />
         <div className="absolute bottom-4 left-4 flex items-center space-x-4">
           <MdPlayCircleFilled color="#287080" size={56} />

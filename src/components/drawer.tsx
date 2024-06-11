@@ -6,7 +6,7 @@ const customTheme: CustomFlowbiteTheme["drawer"] = {
   root: {
     base: "fixed z-40 h-full overflow-y-auto",
     backdrop: "fixed inset-0 z-30 bg-neutral-900/50 backdrop-blur-md",
-    edge: "bottom-0 ",
+    edge: "bottom-8",
     position: {
       bottom: {
         on: "bottom-0 w-full",
@@ -16,6 +16,7 @@ const customTheme: CustomFlowbiteTheme["drawer"] = {
   },
   header: {
     inner: {
+      titleIcon: "hidden",
       titleText: "m-0",
       closeIcon: "hidden",
     },
@@ -28,24 +29,27 @@ const customTheme: CustomFlowbiteTheme["drawer"] = {
 type Props = {
   open: boolean;
   setIsOpen: (open: boolean) => void;
+  headerContent?: ReactNode;
   children: ReactNode;
 };
 
-export function Drawer({ open, setIsOpen, children }: Props) {
+export function Drawer({ open, setIsOpen, headerContent, children }: Props) {
   return (
     <FlowbiteDrawer
       open={open}
       onClose={() => setIsOpen(false)}
       theme={customTheme}
       position="bottom"
-      className="duration-300"
+      className="duration-500 ease-out"
       edge
     >
       <FlowbiteDrawer.Header
         titleIcon={open ? MdKeyboardArrowDown : MdKeyboardArrowUp}
         onClick={() => setIsOpen(!open)}
-        className="bg-neutral-950 p-4"
-      />
+        className={`${open ? "bg-neutral-950" : "bg-primary/90 m-2 rounded-md"} flex h-16 items-center px-8`}
+      >
+        {headerContent}
+      </FlowbiteDrawer.Header>
       <FlowbiteDrawer.Items className="p-4">{children}</FlowbiteDrawer.Items>
     </FlowbiteDrawer>
   );

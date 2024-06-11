@@ -15,7 +15,7 @@ type MenuId = (typeof menuItems)[number]["id"];
 type ContextValue = {
   menuItems: typeof menuItems;
   isMenuOpen: boolean;
-  activeMenu: MenuId;
+  activeMenuId: MenuId;
   onChangeMenu: (id: MenuId) => void;
   setIsMenuOpen: (open: boolean) => void;
 };
@@ -27,11 +27,11 @@ type MenuProviderProps = {
 };
 export function MenuProvider({ children }: MenuProviderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [activeMenu, setActiveMenu] = useState<MenuId>(1);
+  const [activeMenuId, setActiveMenuId] = useState<MenuId>(1);
 
   function onChangeMenu(id: MenuId) {
     setIsMenuOpen(true);
-    setActiveMenu(id);
+    setActiveMenuId(id);
   }
 
   return (
@@ -39,7 +39,7 @@ export function MenuProvider({ children }: MenuProviderProps) {
       value={{
         menuItems,
         isMenuOpen,
-        activeMenu,
+        activeMenuId,
         onChangeMenu,
         setIsMenuOpen,
       }}

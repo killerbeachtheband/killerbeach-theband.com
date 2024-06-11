@@ -4,17 +4,18 @@ import { useMenu } from "@/hooks/use-menu";
 import Image from "next/image";
 
 export function Menu() {
-  const { menuItems, activeMenu, onChangeMenu } = useMenu();
+  const { menuItems, activeMenuId, onChangeMenu } = useMenu();
 
   return (
     <nav>
-      <ol className="flex list-decimal flex-col space-y-4 pl-5">
+      <ol className="flex flex-col">
         {menuItems.map((item) => (
           <li
             key={item.text}
             onClick={() => onChangeMenu(item.id)}
-            className="flex cursor-pointer items-center space-x-4"
+            className="flex cursor-pointer items-center space-x-4 px-5 py-2 duration-300 hover:bg-neutral-800"
           >
+            <p>{item.id}</p>
             <div className="relative">
               <Image
                 src="/solid.png"
@@ -23,7 +24,7 @@ export function Menu() {
                 height={40}
                 className="h-10 w-10"
               />
-              {item.id === activeMenu && (
+              {item.id === activeMenuId && (
                 <Image
                   src="/wave.svg"
                   alt="menu"
@@ -35,7 +36,7 @@ export function Menu() {
             </div>
 
             <div>
-              <p className="text-xl">{item.text}</p>
+              <p className="text-xl font-bold">{item.text}</p>
               <p>aaaaaaaaaaaaa</p>
             </div>
           </li>
