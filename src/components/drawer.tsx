@@ -4,7 +4,7 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const customTheme: CustomFlowbiteTheme["drawer"] = {
   root: {
-    base: "fixed z-40 h-[calc(100%-48px)] overflow-y-auto",
+    base: "fixed z-40 h-full overflow-y-auto",
     backdrop: "fixed inset-0 z-30 bg-neutral-900/50 backdrop-blur-md",
     edge: "bottom-0 ",
     position: {

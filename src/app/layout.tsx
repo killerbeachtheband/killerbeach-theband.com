@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Header } from "@/components/header";
 import localFont from "next/font/local";
 import { MenuProvider } from "@/hooks/use-menu";
 import "./globals.css";
@@ -27,10 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={futura.className}>
       <body className="bg-neutral-950 text-neutral-200">
-        <MenuProvider>
-          <Header />
-          {children}
-        </MenuProvider>
+        <MenuProvider>{children}</MenuProvider>
       </body>
     </html>
   );
