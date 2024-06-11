@@ -41,7 +41,6 @@ export function Home() {
       </div>
 
       <div className="h-48 bg-gradient-to-b from-[#287080]/50 to-neutral-950"></div>
-      <Image src="/wave.svg" alt="logo" width={15} height={15} className="" />
 
       <Menu />
       <Drawer setIsOpen={setIsMenuOpen} open={isMenuOpen}>

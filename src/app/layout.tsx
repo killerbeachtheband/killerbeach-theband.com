@@ -6,7 +6,7 @@ import "./globals.css";
 const futura = localFont({
   src: [
     {
-      path: "../assets/fonts/futura/Futura Book font.ttf",
+      path: "../assets/fonts/futura/Futura Condensed Medium.ttf",
       weight: "400",
       style: "normal",
     },
