@@ -10,7 +10,7 @@ export default function HomePage() {
     <main>
       <div className="relative">
         <Image
-          src="/artist-photo.jpg"
+          src="/artist-photo.webp"
           alt="artist photo"
           width={6000}
           height={4000}
