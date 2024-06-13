@@ -1,10 +1,11 @@
 import { Player } from "@/components/player";
 import { Menu } from "@/components/menu";
-import Image from "next/image";
-import { MdPlayCircleFilled } from "react-icons/md";
 import { News } from "@/components/news";
 import { ContentSwitcher } from "@/components/content-switcher";
 import { MainVisual } from "@/components/main-visual";
+import { Tour } from "@/components/tour";
+import { Music } from "@/components/music";
+import { About } from "@/components/about";
 
 export default function HomePage() {
   return (
@@ -19,11 +20,10 @@ export default function HomePage() {
       <Player>
         <ContentSwitcher
           contents={{
-            1: <>Tour</>,
-            2: <>Music</>,
+            1: <Tour />,
+            2: <Music />,
             3: <News />,
-            4: <>About</>,
-            5: <>Contact</>,
+            4: <About />,
           }}
         />
       </Player>

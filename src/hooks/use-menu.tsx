@@ -7,7 +7,6 @@ const menuItems = [
   { id: 2, text: "Music" },
   { id: 3, text: "News" },
   { id: 4, text: "About" },
-  { id: 5, text: "Contact" },
 ] as const;
 
 export type MenuId = (typeof menuItems)[number]["id"];
