@@ -7,10 +7,9 @@ const menuItems = [
   { id: 2, text: "Music" },
   { id: 3, text: "News" },
   { id: 4, text: "About" },
-  { id: 5, text: "Contact" },
 ] as const;
 
-type MenuId = (typeof menuItems)[number]["id"];
+export type MenuId = (typeof menuItems)[number]["id"];
 
 type ContextValue = {
   menuItems: typeof menuItems;

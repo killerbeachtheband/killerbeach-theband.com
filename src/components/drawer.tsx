@@ -1,6 +1,6 @@
 import { CustomFlowbiteTheme, Drawer as FlowbiteDrawer } from "flowbite-react";
+import Image from "next/image";
 import { ReactNode } from "react";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const customTheme: CustomFlowbiteTheme["drawer"] = {
   root: {
@@ -12,13 +12,6 @@ const customTheme: CustomFlowbiteTheme["drawer"] = {
         on: "bottom-0 w-full",
         off: "bottom-0 w-full translate-y-[calc(100%-48px)]",
       },
-    },
-  },
-  header: {
-    inner: {
-      titleIcon: "hidden",
-      titleText: "m-0",
-      closeIcon: "hidden",
     },
   },
   items: {
@@ -43,13 +36,22 @@ export function Drawer({ open, setIsOpen, headerContent, children }: Props) {
       className="duration-500 ease-out"
       edge
     >
-      <FlowbiteDrawer.Header
-        titleIcon={open ? MdKeyboardArrowDown : MdKeyboardArrowUp}
+      <header
         onClick={() => setIsOpen(!open)}
-        className={`${open ? "bg-neutral-950" : "bg-primary/90 m-2 rounded-md"} flex h-16 items-center px-8`}
+        className={`${open ? "justify-center bg-neutral-950" : "m-2 rounded-md bg-primary/50 backdrop-blur-md"} flex h-16 cursor-pointer items-center`}
       >
-        {headerContent}
-      </FlowbiteDrawer.Header>
+        {open ? (
+          <Image
+            src="/killer-beach-logo-white-transparent.png"
+            alt="logo"
+            width={1873}
+            height={298}
+            className="h-3 w-auto"
+          />
+        ) : (
+          headerContent
+        )}
+      </header>
       <FlowbiteDrawer.Items className="p-4">{children}</FlowbiteDrawer.Items>
     </FlowbiteDrawer>
   );
