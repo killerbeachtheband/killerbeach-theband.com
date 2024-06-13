@@ -38,7 +38,7 @@ export function Drawer({ open, setIsOpen, headerContent, children }: Props) {
     >
       <header
         onClick={() => setIsOpen(!open)}
-        className={`${open ? "justify-center bg-neutral-950" : "m-2 rounded-md bg-primary/50 backdrop-blur-md"} flex h-16 cursor-pointer items-center px-8`}
+        className={`${open ? "justify-center bg-neutral-950" : "m-2 rounded-md bg-primary/50 backdrop-blur-md"} flex h-16 cursor-pointer items-center`}
       >
         {open ? (
           <Image
