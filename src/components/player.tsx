@@ -3,8 +3,13 @@
 import { useMenu } from "@/hooks/use-menu";
 import { Drawer } from "@/components/drawer";
 import Image from "next/image";
+import { ReactNode } from "react";
 
-export function Player() {
+type Props = {
+  children: ReactNode;
+};
+
+export function Player({ children }: Props) {
   const { menuItems, activeMenuId, isMenuOpen, setIsMenuOpen } = useMenu();
   const activeMenu = menuItems.find(({ id }) => id === activeMenuId);
 
@@ -30,7 +35,7 @@ export function Player() {
         </div>
       }
     >
-      <div></div>
+      {children}
     </Drawer>
   );
 }

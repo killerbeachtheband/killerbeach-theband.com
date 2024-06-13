@@ -2,10 +2,12 @@ import { Player } from "@/components/player";
 import { Menu } from "@/components/menu";
 import Image from "next/image";
 import { MdPlayCircleFilled } from "react-icons/md";
+import { News } from "@/components/news";
+import { ContentSwitcher } from "@/components/content-switcher";
 
 export default function HomePage() {
   return (
-    <main className="h-screen">
+    <main>
       <div className="relative">
         <Image
           src="/artist-photo.jpg"
@@ -14,8 +16,7 @@ export default function HomePage() {
           height={4000}
           className="max-h-[80vh] object-cover"
         />
-        <div className="absolute bottom-4 left-4 flex items-center space-x-4">
-          <MdPlayCircleFilled color="#287080" size={56} />
+        <div className="absolute bottom-0 left-0 flex w-full items-center justify-between p-5">
           <Image
             src="/killer-beach-logo-white-transparent.png"
             alt="logo"
@@ -23,13 +24,28 @@ export default function HomePage() {
             height={298}
             className="h-10 w-auto"
           />
+          <button>
+            <MdPlayCircleFilled color="#287080" size={56} />
+          </button>
         </div>
       </div>
 
-      <div className="from-primary/50 h-48 bg-gradient-to-b to-neutral-950"></div>
+      <div className="relative pb-20 pt-5">
+        <div className="absolute left-0 top-0 -z-10 h-48 w-full bg-gradient-to-b from-primary/50 to-neutral-950"></div>
+        <Menu />
+      </div>
 
-      <Menu />
-      <Player />
+      <Player>
+        <ContentSwitcher
+          contents={{
+            1: <>Tour</>,
+            2: <>Music</>,
+            3: <News />,
+            4: <>About</>,
+            5: <>Contact</>,
+          }}
+        />
+      </Player>
     </main>
   );
 }

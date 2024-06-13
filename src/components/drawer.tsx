@@ -18,7 +18,7 @@ const customTheme: CustomFlowbiteTheme["drawer"] = {
     inner: {
       titleIcon: "hidden",
       titleText: "m-0",
-      closeIcon: "hidden",
+      closeButton: "hidden",
     },
   },
   items: {
@@ -46,7 +46,7 @@ export function Drawer({ open, setIsOpen, headerContent, children }: Props) {
       <FlowbiteDrawer.Header
         titleIcon={open ? MdKeyboardArrowDown : MdKeyboardArrowUp}
         onClick={() => setIsOpen(!open)}
-        className={`${open ? "bg-neutral-950" : "bg-primary/90 m-2 rounded-md"} flex h-16 items-center px-8`}
+        className={`${open ? "m-2 rounded-md bg-primary/50 backdrop-blur-md" : "m-2 rounded-md bg-primary/50 backdrop-blur-md"} flex h-16 cursor-pointer items-center px-8`}
       >
         {headerContent}
       </FlowbiteDrawer.Header>

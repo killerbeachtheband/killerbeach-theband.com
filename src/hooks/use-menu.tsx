@@ -10,7 +10,7 @@ const menuItems = [
   { id: 5, text: "Contact" },
 ] as const;
 
-type MenuId = (typeof menuItems)[number]["id"];
+export type MenuId = (typeof menuItems)[number]["id"];
 
 type ContextValue = {
   menuItems: typeof menuItems;
