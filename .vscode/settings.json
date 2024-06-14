@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.configPath": "prettier.config.mjs",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}

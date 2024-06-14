@@ -1,6 +1,6 @@
+import { MenuProvider } from "@/hooks/use-menu";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { MenuProvider } from "@/hooks/use-menu";
 import "./globals.css";
 
 const futura = localFont({
