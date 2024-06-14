@@ -3,6 +3,7 @@ import { loadPostBySlug } from "@/libs/loadPostBody";
 import { marked } from "marked";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 type Props = {
   params: { slug: string };
 };

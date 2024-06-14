@@ -1,7 +1,9 @@
-import { MdPlayCircleFilled } from "react-icons/md";
-import { MdFastForward } from "react-icons/md";
-import { MdFastRewind } from "react-icons/md";
 import { Progress } from "flowbite-react";
+import {
+  MdFastForward,
+  MdFastRewind,
+  MdPlayCircleFilled,
+} from "react-icons/md";
 
 type Props = {
   progress: number;

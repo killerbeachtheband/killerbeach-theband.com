@@ -1,11 +1,11 @@
-import { Player } from "@/components/player";
-import { Menu } from "@/components/menu";
-import { News } from "@/components/news";
+import { About } from "@/components/about";
 import { ContentSwitcher } from "@/components/content-switcher";
 import { MainVisual } from "@/components/main-visual";
-import { Tour } from "@/components/tour";
+import { Menu } from "@/components/menu";
 import { Music } from "@/components/music";
-import { About } from "@/components/about";
+import { News } from "@/components/news";
+import { Player } from "@/components/player";
+import { Tour } from "@/components/tour";
 
 export default function HomePage() {
   return (
