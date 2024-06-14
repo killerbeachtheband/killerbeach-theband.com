@@ -13,7 +13,7 @@ export default function HomePage() {
       <MainVisual />
 
       <div className="relative pb-20 pt-5">
-        <div className="absolute left-0 top-0 -z-10 h-48 w-full bg-gradient-to-b from-primary/50 to-neutral-950"></div>
+        <div className="absolute left-0 top-0 -z-10 h-24 w-full bg-gradient-to-b from-primary/50 to-neutral-950"></div>
         <Menu />
       </div>
 

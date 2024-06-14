@@ -32,8 +32,12 @@ export function MainVisual() {
           </button>
         </div>
       </div>
-      <Modal show={openModal} onClose={() => setOpenModal(false)}>
-        <div className="flex flex-col items-center space-y-12 md:flex-row md:space-x-4 md:space-y-0">
+      <Modal
+        show={openModal}
+        onClose={() => setOpenModal(false)}
+        title="Listen Now"
+      >
+        <div className="flex flex-col items-center space-y-14">
           <Link href="https://open.spotify.com/artist/7L96nhlGEEXlPKI0ZcDqSm?si=qc74MD0uSiiGkT6nBlZCRA">
             <Image
               src="/Spotify_Logo_RGB_Green.png"

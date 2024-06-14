@@ -16,7 +16,7 @@ export default function News({ params }: Props) {
 
   return (
     <main
-      className="prose prose-neutral dark:prose-invert"
+      className="prose prose-neutral prose-invert"
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );
