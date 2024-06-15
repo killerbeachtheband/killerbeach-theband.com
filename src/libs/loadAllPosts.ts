@@ -2,8 +2,8 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 
-export function loadAllPosts() {
-  const dirPath = path.join(process.cwd(), "src", "posts", "news");
+export function loadAllPosts(directory: string) {
+  const dirPath = path.join(process.cwd(), "src", "posts", directory);
   const fileNames = fs.readdirSync(dirPath);
 
   const mdData = fileNames.map((fileName) => {

@@ -38,7 +38,7 @@ export function Drawer({ open, setIsOpen, headerContent, children }: Props) {
     >
       <header
         onClick={() => setIsOpen(!open)}
-        className={`${open ? "justify-center bg-neutral-950" : "m-2 rounded-md bg-primary/50 backdrop-blur-md"} flex h-16 cursor-pointer items-center`}
+        className={`${open ? "justify-center bg-neutral-950" : "m-2 rounded-md bg-primary/50 backdrop-blur-md"} sticky top-0 flex h-16 cursor-pointer items-center`}
       >
         {open ? (
           <Image
@@ -52,7 +52,7 @@ export function Drawer({ open, setIsOpen, headerContent, children }: Props) {
           headerContent
         )}
       </header>
-      <FlowbiteDrawer.Items className="p-4">{children}</FlowbiteDrawer.Items>
+      <FlowbiteDrawer.Items className="p-5">{children}</FlowbiteDrawer.Items>
     </FlowbiteDrawer>
   );
 }

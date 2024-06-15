@@ -3,7 +3,7 @@ import { loadAllPosts } from "@/libs/loadAllPosts";
 import Link from "next/link";
 
 export function News() {
-  const allPosts = loadAllPosts();
+  const allPosts = loadAllPosts("news");
 
   return (
     <div>
