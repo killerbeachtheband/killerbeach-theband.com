@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 const customTheme: CustomFlowbiteTheme["drawer"] = {
   root: {
     base: "fixed z-40 h-full overflow-y-auto",
-    backdrop: "fixed inset-0 z-30 bg-neutral-900/50 backdrop-blur-md",
+    backdrop: "fixed inset-0 z-30 bg-neutral-900/50 backdrop-blur",
     edge: "bottom-8",
     position: {
       bottom: {
@@ -38,7 +38,7 @@ export function Drawer({ open, setIsOpen, headerContent, children }: Props) {
     >
       <header
         onClick={() => setIsOpen(!open)}
-        className={`${open ? "justify-center bg-neutral-950" : "m-2 rounded-md bg-primary/50 backdrop-blur-md"} sticky top-0 flex h-16 cursor-pointer items-center`}
+        className={`${open ? "justify-center bg-neutral-950" : "m-2 rounded-md bg-primary/50 backdrop-blur"} sticky top-0 flex h-16 cursor-pointer items-center`}
       >
         {open ? (
           <Image
