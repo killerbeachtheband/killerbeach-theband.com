@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function News({ params }: Props) {
-  const post = loadPostBySlug(params.slug);
+  const post = loadPostBySlug("news", params.slug);
   if (!post) return notFound();
 
   const html = marked(post.content);
@@ -23,7 +23,7 @@ export default function News({ params }: Props) {
 }
 
 export function generateMetadata({ params }: Props): Metadata {
-  const post = loadPostBySlug(params.slug);
+  const post = loadPostBySlug("news", params.slug);
   if (!post) return notFound();
 
   return {
