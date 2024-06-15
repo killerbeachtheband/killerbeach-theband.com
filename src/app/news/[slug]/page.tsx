@@ -33,6 +33,6 @@ export function generateMetadata({ params }: Props): Metadata {
 }
 
 export function generateStaticParams() {
-  const allMd = loadAllPosts();
+  const allMd = loadAllPosts("news");
   return allMd.map(({ metadata }) => ({ slug: metadata.slug }));
 }
