@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 const customTheme: CustomFlowbiteTheme["drawer"] = {
   root: {
     base: "fixed z-40 h-full overflow-y-auto",
-    backdrop: "fixed inset-0 z-30 bg-neutral-900/50 backdrop-blur",
+    backdrop: "fixed inset-0 z-30 bg-neutral-950/70 backdrop-blur",
     edge: "bottom-8",
     position: {
       bottom: {
