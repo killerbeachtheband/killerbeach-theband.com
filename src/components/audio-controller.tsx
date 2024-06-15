@@ -25,7 +25,7 @@ export function AudioController({
           progress={progress}
           size="sm"
           color="white"
-          theme={{ color: { white: "bg-neutral-100" } }}
+          theme={{ color: { white: "bg-neutral-200" } }}
         />
         <div className="flex justify-center space-x-8">
           <button type="button" onClick={onClickPrev}>
